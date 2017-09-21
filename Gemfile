@@ -56,6 +56,7 @@ gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 gem 'kaminari', '1.0.1'
+gem "font-awesome-rails"
 
 
 source 'https://rails-assets.org' do
