@@ -21,5 +21,3 @@ module Nomster
 	 end
 end
 
-GEOCODER_API_KEY: "IjceOS2TK9aXQ2fxG37x~7tIkoYjdo3Sy6lHIOkF-Zg~ApCQ3krvmMX5EkWX-zYGVAB-RzSdkT_RDkS36P6CoR89D-kJdtjdFA6NHotPXDNV
-"
