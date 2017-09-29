@@ -34,7 +34,13 @@
     }
   	</script>
 
-  	<script async defer
+  	<%= simple_form_for @photo, url: place_comments_path(@place) do |f| %>
+        <div class="modal-body">
+          <%= f.input :picture %>
+        </div>
+
+
+    <script async defer
   	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJY1hCgHiGEGY-2_caj-vGrDw-gRsOGrc&callback=initMap">
   	</script>
 
@@ -43,7 +49,17 @@
 
 	<br />
 
-	<div class="float-right">
+	 <% @place.photo.each do |photo| %>
+    <div class="image_box">
+        <%= link_to image_tag(photo.image), photo.image.url, class: 'img-fluid place_images' %>
+          <div class="caption_spacing"><% if photo.caption.present? %>
+            - <%= photo.caption %>
+          <% end %></div>
+    </div>
+  <% end %>
+</div>
+
+  <div class="float-right">
 		<% if current_user && current_user == @place.user %>
 			<%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
 		<%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
@@ -101,4 +117,10 @@
       </blockquote>
     </div>
   <% end %>
+
+
+
 </div>
+<% end %>
+
+

@@ -8,6 +8,7 @@
     	<small><%= place.user.email %></small>
     <% end %>
  	
+  
  	<% if place.comments.present? %>
  		<div class="col-12">
   		<blockquote>
@@ -19,9 +20,9 @@
   	</blockquote>
 	</div>
 <% end %>
-
 </div>
-<% end %>
+  <% end %>
+
 
 <div class="pagination">
 	<%= paginate @places %>
