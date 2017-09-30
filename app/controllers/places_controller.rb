@@ -39,9 +39,12 @@ class PlacesController < ApplicationController
   end
     
     @place.update_attributes(place_params)
-    redirect_to root_path
-
+    if @place.valid?
+      redirect_to place_path(@place)
+    else
+      render :edit, status: :unprocessable_entity
     end
+  end
 
   def destroy
     @place = Place.find(params[:id])
