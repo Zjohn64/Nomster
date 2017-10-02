@@ -70,7 +70,7 @@
   
   <div id="scroll">
      <div class="col-6 offset-1">
-        <% @place.photo.each do |photo| %>
+        <% @place.photos.each do |photo| %>
           <div class="col-10 col-sm-2">
              <% if photo.picture.present? %>
                  <%= image_tag photo.picture, height: '100px', class: 'image_fluid' %></br >
