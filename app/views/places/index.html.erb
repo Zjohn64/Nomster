@@ -1,3 +1,4 @@
+<div class="booyah-box col-10 offset-1">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -6,19 +7,19 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag 'slider1.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>Eloquent Dishes</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider2.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>Only the Freshest Ingredients</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider3.jpg', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>World-Class Service</h3>
       </div>
@@ -32,6 +33,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
 </div>
 
 <% @places.each do |place| %>
